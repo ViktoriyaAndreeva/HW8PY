@@ -14,6 +14,6 @@ def input_number(title, min, max):
     if min <= number <= max:
         return number
 
-    print_error(f"Вне допустимых границах ({min}..{max})!")
+    print_error(f"Вне допустимых границ ({min}..{max})!")
     return None
     
