@@ -5,16 +5,14 @@ def not_implemented():
     print("Нереализовано!")
 
 menu_teacher = [
-    {'title': 'Просмотреть список учеников', 'action': not_implemented },
-    {'title': 'Найти контакт ученика', 'action': not_implemented },
-    {'title': 'Выставить оценку', 'action': not_implemented },
-    {'title': 'Записать домашнее задание', 'action': not_implemented },
+    {'title': 'Просмотреть список учеников', 'action': function.view_contact_student },
+    {'title': 'Выставить оценку', 'action': function.do_mark },
     {'title': 'Выход', 'action': 'exit' }
 ]
 
 menu_student = [
-    {'title': 'Посмотреть домашку', 'action': not_implemented },
-    {'title': 'Посмотреть оценку', 'action': not_implemented },
+    {'title': 'Просмотреть контакт учителя', 'action': function.view_contact_teacher },
+    {'title': 'Посмотреть оценку', 'action': function.see_mark },
     {'title': 'Выход', 'action': 'exit' }
 ]
 
@@ -50,7 +48,7 @@ def login_admin():
         if item['action'] == 'exit':
             break
 
-        item['action']()        
+        item['action']()
 
 def run():
     item = view.menu_select("Войти под: ", main_menu)
