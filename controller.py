@@ -21,8 +21,8 @@ menu_admin = [
     {'title': 'Добавить контакт учителя', 'action': function.add_contact_teacher},
     {'title': 'Просмотреть контакт ученика', 'action': function.view_contact_student},
     {'title': 'Просмотреть контакт учителя', 'action': function.view_contact_teacher},
-    # {'title': 'Удалить контакт ученика', 'action': function.delete_contact_student},
-    # {'title': 'Удалить контакт учителя', 'action': function.delete_contact_teacher},
+    {'title': 'Удалить контакт ученика', 'action': function.delete_contact_student},
+    {'title': 'Удалить контакт учителя', 'action': function.delete_contact_teacher},
     {'title': 'Выход', 'action': 'exit' }
 ]
 

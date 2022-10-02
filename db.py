@@ -26,11 +26,14 @@ def remove(filename, value):
     fullpath = os.path.join(DB_DIR, filename)
     
     data = read(filename)
-    new_data = [";".join(record) for record in data if record[1] != value]
+    new_data = [";".join(record) for record in data if record[0] != value]
     new_data = "\n".join(new_data)
 
     with open(fullpath, "w", encoding="utf-8") as f:
         f.write(new_data + "\n")
+    
+    return value
 
 def next_id(filename):
     return str(len(read(filename)) + 1)
+    
